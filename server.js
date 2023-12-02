@@ -1,6 +1,30 @@
 import express from "express"
 import dotenv from 'dotenv'
+import cors from "cors";
+import helmet from "helmet";
+import morgan from "morgan";
+import bodyParser from "body-parser";
 
 dotenv.config()
 const PORT = process.env.PORT || 8000
 const app = express()
+
+//connet db
+connectMongoDB()
+
+//middleware
+app.use(express.json()) //to parse the json data
+app.use(cors())
+app.use(helmet()) //Helmet helps secure Express apps by setting HTTP response headers.
+app.use(morgan("dev"))
+app.use(helmet.crossOriginResourcePolicy({policy: "cross-origin"}))
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended: false}))
+
+console.log("first")
+
+app.listen(PORT, (err) => {
+    err
+    ? console.log(err.message)
+    : console.log(`server running at http://localhost:${PORT}`)
+})
