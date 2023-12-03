@@ -4,6 +4,7 @@ import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
 import bodyParser from "body-parser";
+import connectMongoDB from "./src/config/mongoConfig.js";
 
 dotenv.config()
 const PORT = process.env.PORT || 8000
