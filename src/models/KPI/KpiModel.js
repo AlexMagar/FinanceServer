@@ -1,3 +1,5 @@
 import KpiSchema from "./KpiSchema";
 
-export const 
+export const getKpi = () => {
+    console.log("first get the kpi")
+}
