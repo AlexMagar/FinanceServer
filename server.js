@@ -5,6 +5,7 @@ import helmet from "helmet";
 import morgan from "morgan";
 import bodyParser from "body-parser";
 import connectMongoDB from "./src/config/mongoConfig.js";
+import kpiRoutes from "./src/routes/kpi.js"
 
 dotenv.config()
 const PORT = process.env.PORT || 8000
@@ -23,6 +24,9 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 
 console.log("first")
+
+// routes
+app.use("/kpi", kpiRoutes)
 
 app.listen(PORT, (err) => {
     err
