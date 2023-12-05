@@ -1,5 +1,5 @@
-import KpiSchema from "./KpiSchema";
+import KpiSchema from "./KpiSchema.js";
 
 export const getKpi = () => {
-    console.log("first get the kpi")
+    return KpiSchema.find()
 }
