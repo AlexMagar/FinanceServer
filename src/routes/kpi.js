@@ -5,7 +5,9 @@ const router = express.Router()
 
 router.get("/kpi", async (req, res) => {
     try {
-        const kpi = await getKpi()
+        const kpis = await getKpi()
+
+        res.status(200).json(kpis)
         
     } catch (error) {
         res.status(404)
