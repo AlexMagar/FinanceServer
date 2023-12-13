@@ -6,7 +6,6 @@ import morgan from "morgan";
 import bodyParser from "body-parser";
 import connectMongoDB from "./src/config/mongoConfig.js";
 import kpiRoutes from "./src/routes/kpi.js"
-import mongoose from "mongoose";
 
 dotenv.config()
 const PORT = process.env.PORT || 8000
@@ -28,6 +27,8 @@ console.log("first")
 
 // routes
 app.use("/kpi", kpiRoutes)
+app.use("/product", productRoutes)
+app.use("/transaction", transactionRoutes)
 
 app.listen(PORT, (err) => {
     err
