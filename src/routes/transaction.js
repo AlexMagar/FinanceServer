@@ -1,13 +1,15 @@
 import express from "express"
-import { getKpi } from "../models/KPI/KpiModel.js"
+import Transaction from "../models/KPI/KpiModel.js"
 
 const router = express.Router()
 
 router.get("/transactions", async (req, res) => {
     try {
-        const kpis = await getKpi()
+        const transactions = await Transaction.find()
+            .limit(50)
+            .sort({createdOn: -1})
 
-        res.status(200).json(kpis)
+        res.status(200).json(transactions)
         
     } catch (error) {
         res.status(404)
