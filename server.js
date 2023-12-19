@@ -37,7 +37,7 @@ app.listen(PORT, (err) => {
     err
     ? console.log(err.message)
     : console.log(`server running at http://localhost:${PORT}`)
+    //   Add data one time only or as needed
     // transactionRoutes.insertMany(transactions)
-
     // await mongoose.Connection.db.dropDatabase()
 })
