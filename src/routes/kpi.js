@@ -1,11 +1,11 @@
 import express from "express"
-import { getKpi } from "../models/KPI/KpiModel.js"
+import KPI from "../models/KPI.js"
 
 const router = express.Router()
 
 router.get("/kpi", async (req, res) => {
     try {
-        const kpis = await getKpi()
+        const kpis = await KPI.find()
 
         res.status(200).json(kpis)
         
