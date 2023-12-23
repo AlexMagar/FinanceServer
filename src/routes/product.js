@@ -1,11 +1,11 @@
 import express from "express"
-import { products } from "../data/data"
+import product from "../models/Product.js"
 
 const router = express.Router()
 
 router.get("/product", async (req, res) => {
     try {
-        const product = await products.find()
+        const product = await product.find()
         res.status(200).json({
             message: product
         })
