@@ -1,4 +1,4 @@
-@rootApi = http://localhost/:8000
+@rootApi = http://localhost/:8000/api/v1
 
 @kpiApi = {{rootApi}}/kpi
 
