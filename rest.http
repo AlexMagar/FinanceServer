@@ -1,0 +1,10 @@
+@rootApi = http://localhost/:8000
+
+@kpiApi = {{rootApi}}/kpi
+
+###server request 
+GET {{rootApi}}
+
+# ========= kpi request =====
+### get kpi
+GET {{kpiApi}}
