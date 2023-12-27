@@ -11,8 +11,8 @@ import productRoutes from "./src/routes/product.js";
 import { kpis, products, transactions} from "./src/data/data.js"
 import mongoose from "mongoose";
 import KPI from "./src/models/KPISchema.js";
-import Product from "./src/models/Product.js";
-import Transaction from "./src/models/Transaction.js";
+import Product from "./src/models/ProductSchema.js";
+import Transaction from "./src/models/TransactionSchema.js";
 import connectMongoDB from "./src/config/mongoConfig.js";
 
 const PORT = process.env.PORT || 8000
