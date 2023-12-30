@@ -22,8 +22,8 @@ app.use(cors())
 
 //apis
 app.use("/api/v1/kpi", kpiRouter)
-add.use("/api/v1/product", productRouter)
-add.use("/api/v1/transaction", transactionRouter)
+app.use("/api/v1/product", productRouter)
+app.use("/api/v1/transaction", transactionRouter)
 
 
 app.use("/", (req, res) => {
