@@ -25,15 +25,12 @@ app.use("/api/v1/kpi", kpiRouter)
 app.use("/api/v1/product", productRouter)
 app.use("/api/v1/transaction", transactionRouter)
 
-
 app.use("/", (req, res) => {
     res.json({
         status: "Success",
-        message: "server running well"
+        message: "server running well index"
     })
 })
-
-
 app.listen(PORT, (err) => {
     err 
     ? console.log(err.message)
