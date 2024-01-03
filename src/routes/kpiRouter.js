@@ -24,12 +24,13 @@ router.post("/", async (req, res) => {
 
 router.get("/", async (req, res) => {
     try {
-        const result = await getKpi()
-        console.log("kpis first")
+        // const result = await getKpi()
+        const result = kpis
+        console.log("kpis first", result)
         result &&
         res.json({
             status: "success",
-            message: "KPIS ROUTER"
+            message: result
         })
     } catch (error) {
         res.status(500).json({
