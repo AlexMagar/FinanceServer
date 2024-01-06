@@ -1,8 +1,14 @@
 import expres from 'express'
 import { addKpi, getKpi } from '../models/KPIModel.js'
-import { kpis } from '../data/data.js'
+// import { kpis } from '../data/data.js'
 
 const router = expres.Router()
+
+const kpis = {
+    totalProfit: "$212000.00",
+    totalRevenue: "$283000.00",
+    totalExpenses: "$71000.00",
+}
 
 router.post("/", async (req, res) => {
     try {
@@ -24,8 +30,8 @@ router.post("/", async (req, res) => {
 
 router.get("/", async (req, res) => {
     try {
-        // const result = await getKpi()
-        const result = kpis
+        const result = await getKpi()
+        // const result = kpis
         console.log("kpis first", result)
         result &&
         res.json({
