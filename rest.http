@@ -1,6 +1,6 @@
-@rootApi = http://localhost:8000/api/v1
+@rootApi = http://localhost:8002
 
-@kpiApi = {{rootApi}}/kpi
+@kpiApi = {{rootApi}}/api/v1/kpi
 
 ###server request 
 GET {{rootApi}}
@@ -8,3 +8,6 @@ GET {{rootApi}}
 # ========= kpi request =====
 ### get kpi
 GET {{kpiApi}}
+
+### add new kpis
+POST {{kpiApi}}
