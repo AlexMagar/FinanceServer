@@ -8,7 +8,7 @@ const connectMongoDB = async () => {
         })
         conn && console.log("Mongo Connected")
     } catch (error) {
-        console.log(error.message)
+        console.log("DB cloud not connect ",error.message)
     }
 }
 
