@@ -9,7 +9,7 @@ import productRouter from "./src/routes/productRouter.js"
 import transactionRouter from "./src/routes/transactionRouter.js"
 import { kpis } from "./src/data/data.js";
 
-const PORT = process.env.PORT || 8000
+const PORT = process.env.PORT || 8002
 const app = express()
 
 //connect db
