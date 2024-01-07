@@ -1,9 +1,9 @@
-import kpiSchem from "./kpiSchem.js"
+import kpiSchema from "./kpiSchem.js"
 
 export const getKpi = () => {
-    return kpiSchem.find()
+    return kpiSchema.find()
 }
 
 export const addKpi = (kpis) => {
-    return kpiSchem(kpis).save()
+    return kpiSchema(kpis).save()
 }
